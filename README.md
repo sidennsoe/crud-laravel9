@@ -1,5 +1,5 @@
 ## CRUD LARAVEL 9
-Buat project baru, pastikan terminal/command prompt/gitbash anda ada di directory ‘htdocs’ ataupun di folder tempat penyimpanan project kesukaan anda.
+Buat project baru, pastikan terminal/command prompt/gitbash anda ada di directory <code>‘htdocs’</code> ataupun di folder tempat penyimpanan project kesukaan anda.
 
 ```bash
 composer create-project laravel/laravel latihan-crud9
@@ -11,9 +11,9 @@ selanjutnya kita pindah directory project laravel menggunakan perintah
 cd latihan-crud9
 ```
 
-buat database baru bernama ‘latihan-crud’ atau bebas
+buat database baru bernama <code>‘latihan-crud’</code> atau bebas
 
-selanjutnya konfigurasi database kalian di file ‘.env’ seperti dibawah ini
+selanjutnya konfigurasi database kalian di file <code>‘.env’</code> seperti dibawah ini
 
 ```bash
 DB_CONNECTION=mysql
@@ -36,19 +36,20 @@ php artisan ui bootstrap --auth
 
 ## 1. Persiapan Assets
 
-langkah selanjutnya kita disuruh mendownload app.js menggunakan node js namun akan kita skip dan diganti menggunakan bootstrap 5, silahkan kalian download bootstrap 5 , sesudah didownload langsung extract isi bootstrapnya dan copy folder ‘css’ & ‘js’ kemudian paste didalam folder ‘public’ project laravel kalian, setelah kita masukan css dan js nya, kita juga membutuhkan DataTable sebagai plugin untuk menampilkan data dari crud yang akan kita buat, silahkan kalian download DataTables5 , setelah di download langsung di extract to ‘DataTables’ kemudian kalian cut/copy foldernya ke dalam folder ‘public’ di dalam project kalian dan yang terakhir kita membutuhkan sebuah file yang bernama jquery silahkan kalian copy isi codenya dan buat sebuah file baru bernama ‘jquery-3.5.1.js’ didalam folder ‘public/js’ 
+langkah selanjutnya kita disuruh mendownload app.js menggunakan node js namun akan kita skip dan diganti menggunakan bootstrap 5, silahkan kalian download bootstrap 5 , sesudah didownload langsung extract isi bootstrapnya dan copy folder <code>‘css’ & ‘js’</code> kemudian paste didalam folder ‘public’ project laravel kalian, setelah kita masukan css dan js nya, kita juga membutuhkan DataTable sebagai plugin untuk menampilkan data dari crud yang akan kita buat, silahkan kalian download DataTables5 , setelah di download langsung di extract to <code>‘DataTables’</code> kemudian kalian cut/copy foldernya ke dalam folder <code>‘public’</code> di dalam project kalian dan yang terakhir kita membutuhkan sebuah file yang bernama jquery silahkan kalian copy isi codenya dan buat sebuah file baru bernama <code>‘jquery-3.5.1.js’</code> didalam folder <code>‘public/js’</code> 
 
-struktur folder di dalam ‘public’<br>
+struktur folder di dalam <code>‘public’</code><br>
 
 <img src="https://miro.medium.com/max/720/1*LtASOQCOeCWnWX7eLiRWjA.png" alt="laravel1" border="0">
 
 ## 2. Membuat Model Migration & Controller
-membuat model & Migration Siswa
+membuat Model & Migration Siswa
 
 ```bash
 php artisan make:model Siswa -m
 ```
-isi code migration & model
+
+isi code migration & model dengan
 
 ```bash
 <?php
@@ -117,14 +118,14 @@ php artisan migrate
 ```
 agar struktur table yang telah kita buat dapat terkirim ke database.
 
-membuat Controller Siswa
+membuat <code>Controller Siswa</code>
 
 
 ```bash
 php artisan make:controller SiswaController -r
 ```
 
-isi code SiswaController.php
+isi code <code>SiswaController.php</code>
 
 ```bash
 <?php
@@ -265,7 +266,7 @@ class SiswaController extends Controller
 }
 ```
 
-setelah membuat controller langkah selanjutnya mengisi routes/web.php
+setelah membuat controller langkah selanjutnya mengisi <code>routes/web.php</code>
 
 ```bash
 <?php
@@ -298,7 +299,7 @@ Route::resource('siswa', SiswaController::class);
 ```
 
 ## 3. UI Template & CRUD Siswa
-menyiapkan flash untuk notifikasi ketika data berhasil dibuat diedit maupun di hapus, silahkan kalian buat sebuah file baru bernama ‘_flash.blade.php’ di dalam folder ‘resources/views/layouts/’
+menyiapkan flash untuk notifikasi ketika data berhasil dibuat diedit maupun di hapus, silahkan kalian buat sebuah file baru bernama <code>‘_flash.blade.php’</code> di dalam folder <code>‘resources/views/layouts/’</code>
 
 ```bash
 @if ($message = Session::get('success'))
@@ -338,7 +339,7 @@ menyiapkan flash untuk notifikasi ketika data berhasil dibuat diedit maupun di h
 ```
 
 <small>flash untuk notifikasi pengolahan data siswa</small>
-selanjutnya buat folder siswa di dalam folder ‘resources/views’ kemudian kalian isi dengan 4 buah file
+selanjutnya buat folder siswa di dalam folder <code>‘resources/views’</code> kemudian kalian isi dengan 4 buah file
 
 ```bash
 index.blade.php
@@ -347,7 +348,7 @@ edit.blade.php
 show.blade.php
 ```
 
-nah setelah menambahkan ke 4 file tersebut kita edit template bawaan dari laravel di dalam folder ‘resources/views/layouts/app.blade.php’ menjadi seperti dibawah ini
+nah setelah menambahkan ke 4 file tersebut kita edit template bawaan dari laravel di dalam folder <code>‘resources/views/layouts/app.blade.php’</code> menjadi seperti dibawah ini
 
 ```bash
 <!doctype html>
@@ -456,7 +457,7 @@ nah setelah menambahkan ke 4 file tersebut kita edit template bawaan dari larave
 </html>
 ```
 
-setelah mengedit app.blade.php mari kita isi file dari index.blade.php di dalam folder ‘siswa’
+setelah mengedit <code>app.blade.php</code> mari kita isi file dari i<code>ndex.blade.php</code> di dalam folder <code>‘siswa’</code>
 
 ```bash
 @extends('layouts.app')
@@ -549,7 +550,7 @@ maka tampilannya akan menjadi seperti dibawah ini
 
 halaman index siswa
 
-create.blade.php
+<code>create.blade.php</code>
 
 ```bash
 @extends('layouts.app')
@@ -661,7 +662,7 @@ create.blade.php
 
 Halaman Create Data Siswa
 
-edit.blade.php
+<code>edit.blade.php</code>
 
 ```bash
 @extends('layouts.app')
@@ -779,7 +780,7 @@ edit.blade.php
 
 Halaman Edit Data Siswa
 
-show.blade.php
+<code>show.blade.php</code>
 
 ```bash
 @extends('layouts.app')
@@ -845,7 +846,7 @@ Proses Pembuatan Data Siswa
 <img src="https://miro.medium.com/max/720/1*QZgWI7rpFL8rznYGoSk8_w.gif" alt="laravel1" border="0">
 
 
-dan yang terakhir ubah isi file welcome.blade.php menjadi seperti dibawah ini
+dan yang terakhir ubah isi file <code>welcome.blade.php</code> menjadi seperti dibawah ini
 
 
 ```bash
