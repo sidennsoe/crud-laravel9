@@ -457,7 +457,7 @@ nah setelah menambahkan ke 4 file tersebut kita edit template bawaan dari larave
 </html>
 ```
 
-setelah mengedit <code>app.blade.php</code> mari kita isi file dari i<code>ndex.blade.php</code> di dalam folder <code>‘siswa’</code>
+setelah mengedit <code>app.blade.php</code> mari kita isi file dari <code>index.blade.php</code> di dalam folder <code>‘siswa’</code>
 
 ```bash
 @extends('layouts.app')
