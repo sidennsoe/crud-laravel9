@@ -12,7 +12,7 @@ selanjutnya kita pindah directory project laravel menggunakan perintah
 cd crud-laravel9
 ```
 
-buat database baru bernama <code>‘latihan-crud’</code> atau bebas
+buat database baru bernama <code>‘crud-laravel9’</code> atau bebas
 
 selanjutnya konfigurasi database kalian di file <code>‘.env’</code> seperti dibawah ini
 
