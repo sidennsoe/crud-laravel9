@@ -1,14 +1,15 @@
 ## CRUD LARAVEL 9
-Buat project baru, pastikan terminal/command prompt/gitbash anda ada di directory <code>‘htdocs’</code> ataupun di folder tempat penyimpanan project kesukaan anda.
+
+Buat project baru, pastikan <code>terminal/command</code> <code>prompt/gitbash</code> anda ada di directory <code>‘htdocs’</code> ataupun di folder tempat penyimpanan project kesukaan anda.
 
 ```bash
-composer create-project laravel/laravel latihan-crud9
+composer create-project laravel/laravel crud-laravel9
 ```
 
 selanjutnya kita pindah directory project laravel menggunakan perintah
 
 ```bash
-cd latihan-crud9
+cd crud-laravel9
 ```
 
 buat database baru bernama <code>‘latihan-crud’</code> atau bebas
