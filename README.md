@@ -25,6 +25,12 @@ DB_USERNAME=your_db_username
 DB_PASSWORD=your_db_password
 ```
 
+Jalankan perintah
+
+```bash
+install composer
+```
+
 membuat Authentication, jalankan perintah:
 
 ```bash
@@ -34,6 +40,14 @@ composer require laravel/ui
 ```bash
 php artisan ui bootstrap --auth
 ```
+
+Silakan jalankan 
+
+```bash
+npm install && npm run dev
+```
+ntuk mengkompilasi scaffolding baru Anda
+
 
 ## 1. Persiapan Assets
 
