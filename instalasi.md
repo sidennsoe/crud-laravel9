@@ -71,7 +71,7 @@ kemudian kalian register dan isi data siswa secara manual dari database kalian t
 
 localhost:8000/siswa
 maka tampilannya akan menjadi seperti dibawah ini
-
+<script src="https://gist.github.com/candraherdiansyah/53bbd07754e502b26aaf443e186b1b4f.js"></script>
 
 halaman index siswa
 create.blade.php
